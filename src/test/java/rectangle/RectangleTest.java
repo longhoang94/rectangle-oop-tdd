@@ -31,4 +31,20 @@ public class RectangleTest {
         double actual = rectangle.getPerimeter();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testAnotherSize() {
+        Rectangle rectangle = new Rectangle(4, 40);
+        double expectedArea = 160;
+        double expectedPiremeter = 88;
+        String expectedDisplay = "Rectangle{width = 4.0, height = 40.0}";
+
+        double actualArea = rectangle.getArea();
+        double actualPiremeter = rectangle.getPerimeter();
+        String actualDisplay = rectangle.display();
+
+        assertEquals(expectedArea, actualArea);
+        assertEquals(expectedPiremeter, actualPiremeter);
+        assertEquals(expectedDisplay, actualDisplay);
+    }
 }
