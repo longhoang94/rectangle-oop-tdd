@@ -18,8 +18,17 @@ public class RectangleTest {
     public void testDisplayOfRectangle() {
         Rectangle rectangle = new Rectangle(5, 6);
         String expected = "Rectangle{width = 5.0, height = 6.0}";
-        String actual = rectangle.display();
 
+        String actual = rectangle.display();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testPiremeterOfRectangle() {
+        Rectangle rectangle = new Rectangle(9, 8);
+        double expected = 34;
+
+        double actual = rectangle.getPerimeter();
         assertEquals(expected, actual);
     }
 }
